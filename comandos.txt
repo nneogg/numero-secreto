@@ -1,4 +1,4 @@
 comandos
 git add.
-git commit -n "descrição"
+git commit -m "descrição"
 git push
