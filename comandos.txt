@@ -17,3 +17,16 @@ Enviar commits feitos no repositório local para o repositório remoto, utilizan
 
 Baixar commits do repositório remoto para o repositório local, utilizando o comando git pull
 
+ara alterar informações do último commit, como o texto da mensagem, use o comando a seguir:
+git commit --amend -m “NOVA MENSAGEM”
+Para reverter automaticamente as mudanças feitas no último commit sem excluir o histórico: git revert <hash-do-commit>
+Se você precisar reverter uma série de commits, pode utilizar o seguinte comando: git revert -n <hash-do-ultimo-commit-a-manter>
+Use para apagar o commit selecionado, desfazendo automaticamente as mudanças no código: git reset --hard <hash-do-ultimo-commit-a-manter>
+Se você apenas deseja desfazer commits, mas manter as alterações no diretório de trabalho, você pode usar git reset --soft.
+Na aula, vimos que o comando git revert é utilizado para reverter as mudanças de um commit de maneira automática, criando um novo commit que desfaz as alterações do commit anterior. Isso é útil porque mantém o histórico de commits intacto, o que é importante em projetos colaborativos.
+
+Já o comando git reset é usado para apagar um determinado commit do histórico, desfazendo automaticamente suas mudanças no código. Você citou corretamente as variações --soft e --hard. O git reset --soft move o ponteiro HEAD para um commit anterior, mas mantém as mudanças no staging area, permitindo que você as comite novamente. Por outro lado, o git reset --hard é mais drástico, pois além de mover o ponteiro HEAD, ele descarta todas as mudanças no working directory e no staging area a partir do commit de destino, efetivamente apagando-as.
+
+Outro comando que você destacou foi o git commit --amend, que serve para modificar o último commit efetuado. Com ele, é possível alterar a mensagem do commit ou incluir novas modificações no código que você esqueceu de adicionar. É uma ferramenta poderosa para corrigir pequenos erros antes que o commit seja compartilhado.
+
+A utilização do git log e git log -p é fundamental para verificar essas alterações no histórico e entender o que foi modificado, garantindo que as operações de revert, reset e amend foram aplicadas como esperado.
