@@ -1,11 +1,11 @@
-#comandos
+# comandos
 git add.
 git commit -m "descrição"
 git push
 
-##Baixar uma cópia de um repositório hospedado no GitHub para o seu computador, utilizando o comando git clone;
+## Baixar uma cópia de um repositório hospedado no GitHub para o seu computador, utilizando o comando git clone;
 
-##Realizar alterações no código de um projeto e registrá-las com commits, utilizando os comandos git add e git commit;
+## Realizar alterações no código de um projeto e registrá-las com commits, utilizando os comandos git add e git commit;
 
 Visualizar quais arquivos foram modificados no repositório local, utilizando o comando git status;
 
